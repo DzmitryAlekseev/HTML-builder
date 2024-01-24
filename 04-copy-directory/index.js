@@ -25,8 +25,6 @@ fs.readdir(
     if (err) throw err;
     files.forEach(file => {
         if (file.isFile()){
-            console.log(files)
-            console.log(__dirname)
             fs.copyFile(
                 path.join(__dirname, "files", file.name),
                 path.join(__dirname, "files-copy", file.name),
